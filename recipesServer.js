@@ -44,7 +44,7 @@ async function getRecipe(name) {
   let ingredients = "";
   if (data.meals == null) {
     let noneFound = {
-        mealName: `"${name}" not found`,
+        mealName: `"${name}" not found! Try searching "penne" :)`,
         ingredientList: "Ingredients Not Found",
         instructions: "Instructions Not Found",
       };
