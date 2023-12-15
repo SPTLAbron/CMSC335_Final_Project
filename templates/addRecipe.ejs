@@ -8,18 +8,29 @@
 
 <body>
 	<h1>Add Your Own Recipe!</h1>
-    <form action="/acceptRecipe" method="post">
-        Dish Name: <input type="text" name="name">
+    <form action="/processRecipe" method="post">
+        <p>Dish Name: </p><input type="text" name="name">
         <br>
-        <br>
-        Dish Ingredients (Format: "Ingredient - Measurement"): <br>Use a new line for each ingredient!<br><textarea placeholder="Cinnamon - 3 tsp &#10Garlic - 1 clove" name="ingr"></textarea>
-        <br>
-        <br>
-        Instructions: <br>Use a new line for each instruction!<br><textarea placeholder="Break 3 eggs &#10Whisk 3 eggs" name="instr"></textarea>
+        <p>Dish Ingredients (Format: "Ingredient - Measurement"): <br>Use a new line for each ingredient!</p><textarea placeholder="Cinnamon - 3 tsp &#10Garlic - 1 clove" name="ingr"></textarea>
+        <p>Dish Instructions: <br>Use a new line for each instruction!</p><textarea placeholder="Break 3 eggs &#10Whisk 3 eggs" name="instr"></textarea>
         <br>
         <br>
         <input type="submit">
         <input type="reset">
+        <style>
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a:hover {
+            color: red;
+        }
+        </style>
     </form>
     <hr>
     <a href="/">Home</a>

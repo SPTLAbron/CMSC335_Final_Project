@@ -7,42 +7,27 @@
 </head>
 
 <body>
-    <script>
-        async function getJSONData() {
-    let recipe = "penne"
-    const result = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`
-    );
-    const json = await result.json();
-  
-    return json; /* The result will be wrapped in a promise */
-    }
-  
-  async function getRecipe() {
-      const data = await getJSONData(); /* remove await and see what is printed */
-      let ingredients = "";
-      for(let i  = 0; i < 20; i++){
-        let ingr = "strIngredient" + (i + 1);
-        let meas = "strMeasure" + (i + 1);
-        if ((data.meals[0][ingr] != "" && data.meals[0][ingr] != null) && (data.meals[0][meas] != " " && data.meals[0][meas] != null)) {
-            ingredients = ingredients + data.meals[0][ingr] + " - " + data.meals[0][meas] + "\n";
-        }
-      }
-      console.log(data.meals[0].strMeal);
-      console.log(ingredients)
-      console.log(data.meals[0].strInstructions);
-
-  }
-    </script>
-	<h1>Search Public Recipe</h1>
-    <form method="post">
-        <strong>Recipe Name: </strong><input name="recipe" type="text">
-        <br>
-        <br>
-        <input type="submit" onclick="getRecipe()">
+	<h1>Search Public Recipes</h1>
+    <form action="/showPublicRecipe" method="post">
+        <p><strong>Enter a recipe keyword and we'll recommend a recipe: </p></strong><input id="recipeName" name="name" type="text">
+        <input type="submit">
         <input type="reset">
     </form>
     <hr>
     <a href="/">Home</a>
+    <style>
+      h1 {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      p {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      a {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      a:hover {
+          color: red;
+      }
+  </style>
 </body>
 </html>
