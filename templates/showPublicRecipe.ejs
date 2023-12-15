@@ -8,12 +8,13 @@
 <body>
     <h1>PalateSavor</h1>
     <hr>
-    <h2>Public Recipes</h2>
-    <a href="/searchPublicRecipe">Search our database of recipes!</a>
-	<h2>Your Private Recipes</h2>
-    <a href="/addRecipe">Add your own recipes!</a>
-    <br>
-    <a href="/searchPrivateRecipe">Search up private recipes!</a>
+	<p><strong>Dish Name: </strong><%- mealName %></p>
+    <p><strong>Ingredients List: </strong><%- ingredientList %></p>
+    <p><strong>Instructions: </strong><%- instructions %></p>
+    <div id="recipeCard">
+    </div>
+    <hr>
+    <a href="/">Home</a>
     <style>
         h1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,6 +28,9 @@
         }
         a:hover {
             color: red;
+        }
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
 </body>
