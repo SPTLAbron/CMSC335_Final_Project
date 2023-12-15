@@ -28,11 +28,17 @@ app.get("/searchPrivateRecipe", (request, response) => {
     response.render("searchPrivateRecipe");
 });
 
+app.post("/acceptSearchPrivateRecipe", (request, response) => {
+    const {name} = request.body;
+
+    response.render("acceptSearchPrivateRecipe", {name});
+})
+
 app.get("/searchPublicRecipe", (request, response) => {
     response.render("searchPublicRecipe");
 });
 
-app.listen(5000);
+app.listen(9000);
 
 process.stdin.setEncoding("utf8");
 
