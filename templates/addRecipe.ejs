@@ -8,11 +8,11 @@
 
 <body>
 	<h1>Add Your Own Recipe!</h1>
-    <form action="/acceptRecipe" method="post">
+    <form action="/processRecipe" method="post">
         <p>Dish Name: </p><input type="text" name="name">
         <br>
         <p>Dish Ingredients (Format: "Ingredient - Measurement"): <br>Use a new line for each ingredient!</p><textarea placeholder="Cinnamon - 3 tsp &#10Garlic - 1 clove" name="ingr"></textarea>
-        <p>Dish Ingredients (Format: "Ingredient - Measurement"): <br>Use a new line for each instruction!</p><textarea placeholder="Break 3 eggs &#10Whisk 3 eggs" name="instr"></textarea>
+        <p>Dish Instructions: <br>Use a new line for each instruction!</p><textarea placeholder="Break 3 eggs &#10Whisk 3 eggs" name="instr"></textarea>
         <br>
         <br>
         <input type="submit">
