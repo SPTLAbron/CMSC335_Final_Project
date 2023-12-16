@@ -179,9 +179,9 @@ class recipesServer {
       const { name } = request.body;
       getRecipeByName(name).then(recipe =>  {
         if(recipe) {
-          response.render('acceptRecipe.ejs', {name: recipe.name, ingr: recipe.ingr, instr: recipe.instr});
+          response.render('acceptSearchPrivateRecipe.ejs', {name: recipe.name, ingr: recipe.ingr, instr: recipe.instr});
         } else {
-          response.render('acceptRecipe.ejs', {name:'NONE', ingr:'NONE', instr: 'NONE'});
+          response.render('acceptSearchPrivateRecipe.ejs', {name:'NONE', ingr:'NONE', instr: 'NONE'});
         }
       });
     });
